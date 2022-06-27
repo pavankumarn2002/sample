@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="mt-2 mb-2"><u>Custom Directives</u></h2>
+    <h4 class="mt-2 mb-2">Attribute Providing Back Ground Color</h4>
+    <div class="p-5" appBgColor>
+        <p *ngVar="'custom-directive works!' as v">
+            <b>{{v}}</b>
+        </p>
+    </div>
+    <h4 class="mt-2 mb-2">Dynamic Hovering Back Ground Color</h4>
+    <div class="p-5">
+        <p *ngVar="'custom-directive works!' as v" [appHoverColor]="'red'">
+            <b>{{v}}</b>
+        </p>
+    </div>
+    <div>
+        <select [(ngModel)]="myColor">
+            <option value='' selected> Select Color For Text </option>
+            <option *ngFor="let color of colors" [value]="color">
+                On Hover {{color}} Text
+            </option>
+        </select>
+        <p [appHoverColor]="myColor"> dynamicColor Directive Demo</p>
+    </div>
+    <h4 class="mt-2 mb-2">Dynamic Back Ground Color</h4>
+    <div class="p-5" [appDynamicBg]="textColor">
+        <p *ngVar="'custom-directive works!' as v">
+            <b>{{v}}</b>
+        </p>
+    </div>
+</div>

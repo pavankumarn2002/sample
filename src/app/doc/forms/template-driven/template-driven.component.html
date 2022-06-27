@@ -1,0 +1,50 @@
+<h2><u>Template Driven Forms</u></h2>
+<form (ngSubmit)="onFormSubmit()">
+    <div class="row row-cols-2">
+        <div class="col">
+            <label for="text">Text</label>
+            <input type="text" id="text" name="formText" [(ngModel)]="model.text" />
+        </div>
+        <div class="col">
+            <label for="number">Number</label>
+            <input type="number" id="number" name="formNumber" [(ngModel)]="model.number" />
+        </div>
+        <div class="col">
+            <label for="select">Select</label>
+            <select id="select" name="formSelect" [(ngModel)]="model.select">
+                <option [value]="null">Default Option</option>
+                <option *ngFor="let option of options" [value]="option.value">
+                    {{ option.label }}
+                </option>
+            </select>
+        </div>
+        <div class="col">
+            <label>Checkbox list</label>
+            <div *ngFor="let check of model.checks" ngModelGroup="formCheckbox">
+                <input type="checkbox" [id]="'formCheckbox-' + check.id" [name]="check.id"
+                    [(ngModel)]="check.selected" />
+                <label [for]="'formCheckbox-' + check.id">{{ check.label }}</label>
+            </div>
+        </div>
+        <div class="col">
+            <label>Radio group</label>
+            <div>
+                <input type="radio" id="radio-1" name="formRadioGroup" [value]="1" [(ngModel)]="model.radio" />
+                <label for="radio-1">Radio One</label>
+            </div>
+
+            <div>
+                <input type="radio" id="radio-2" name="formRadioGroup" [value]="2" [(ngModel)]="model.radio" />
+                <label for="radio-2">Radio Two</label>
+            </div>
+
+            <div>
+                <input type="radio" id="radio-3" name="formRadioGroup" [value]="3" [(ngModel)]="model.radio" />
+                <label for="radio-3">Radio Three</label>
+            </div>
+        </div>
+        <div class="col">
+            <button type="submit" value="submit">Submit</button>
+        </div>
+    </div>
+</form>

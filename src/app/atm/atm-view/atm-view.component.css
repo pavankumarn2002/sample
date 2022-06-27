@@ -1,0 +1,12 @@
+.atm-data{
+    background-color: rgb(231, 231, 231);padding:25px;
+}
+table tr td{
+    border:1px solid #cc54ae;font-size:16px
+}
+table tr td:nth-child(1){
+   font-weight:bold;padding-left:7px;
+}
+table tr td:nth-child(2){
+    font-weight:500;padding-left:7px;
+}

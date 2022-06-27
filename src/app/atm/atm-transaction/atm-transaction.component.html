@@ -1,0 +1,52 @@
+<div class="container transaction-container">
+    <h4>Transation</h4>
+    <h5>Current Balance - {{lastBalance}} Rs</h5>
+    <form [formGroup]="form" (ngSubmit)="submits()">
+        <div class="row row-cols-2">
+        <div class="col form-group">
+            <label for="accountNo">Account Number :</label>
+            <input formControlName="accountNo" id="accountNo" type="text" class="form-control" [ngModel] ="currentAccountNo">
+            <div *ngIf="f['accountNo'].touched && f['accountNo'].invalid" class="alert alert-danger">
+                <div *ngIf="f['accountNo'].errors && f['accountNo'].errors['required']">Account Number Is Required.
+                </div>
+            </div>
+        </div>
+
+        <div class="col form-group">
+            <label for="name">Name :</label>
+            <input formControlName="name" id="name" type="text" class="form-control" [ngModel] ="currentName">
+            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">Name Is Required.</div>
+            </div>
+        </div>
+        <div class="col form-group">
+            <label for="userId">User Id :</label>
+            <input formControlName="userId" id="userId" type="text" class="form-control" [ngModel] ="currentUserId">
+            <div *ngIf="f['userId'].touched && f['userId'].invalid" class="alert alert-danger">
+                <div *ngIf="f['userId'].errors && f['userId'].errors['required']">User Id Is Required.</div>
+            </div>
+        </div>
+        <div class="col form-group">
+            <label for="deposit">Deposit :</label>
+            <input formControlName="deposit" id="deposit" type="text" class="form-control" (blur)="addVal($event)">
+        </div>
+        <div class="col form-group">
+            <label for="withdraw">Withdraw :</label>
+            <input formControlName="withdraw" id="withdraw" type="text" class="form-control"  (blur)="subVal($event)">
+        </div>
+        <div class="col form-group">
+            <label for="balance">Balance :</label>
+            <input formControlName="balance" id="balance" type="text" class="form-control"  readonly [ngModel] ="currentBalance">
+        </div>
+        <div class="col form-group">
+            <label for="location">Location :</label>
+            <input formControlName="location" id="location" type="text" class="form-control">
+        </div>
+        <div class="col form-group">
+            <label for="date">Date :</label>
+            <input formControlName="date" id="date" type="date" class="form-control" [ngModel] ="currentDate">
+        </div>
+        </div>
+        <button class="btn btn-primary submit-btn" type="submit" >Submit</button>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+.view{
+    background-color: rgb(56, 223, 245);padding:7px 2px 7px 2px;margin:2px;width:50px;font-size:13px;color:white;border:0 solid;
+}
+.edit{
+    background-color: rgb(19, 1, 68);padding:7px 2px 7px 2px;margin:2px;width:50px;font-size:13px;color:white;border:0 solid;
+}
+.delete{
+    background-color: rgb(78, 5, 5);padding:7px 2px 7px 2px;margin:2px;width:50px;font-size:13px;color:white;border:0 solid;
+}
+.atm-data{
+    background-color: rgb(231, 231, 231);padding:25px;
+}
+table tr th{
+    border:1px solid #cc54ae;text-align: center;
+}
+table tr td{
+    border:1px solid #cc54ae;text-align: center;
+}
+
+input {width:25%;height:37px;border:0px solid rgb(0,0,0,0);text-align: center;border-radius: 15px; border: 2px solid #73AD21; width: fit-content; margin: 5px; padding: 10px;}
+input::placeholder{
+    color:rgb(128, 128, 128,0.4);font-weight: 500;font-size:12px;
+}
+button {text-align: center;border-radius: 15px; border: 2px solid #73AD21; width: fit-content; margin: 5px; padding: 10px;}

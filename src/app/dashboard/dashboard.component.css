@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Inspiration&family=Palette+Mosaic&family=Permanent+Marker&family=Playfair+Display:ital@0;1&family=Poppins&family=Roboto:wght@300;400&display=swap');
+.welcome-area{
+    padding:12px;
+}
+.router {
+    background-color: aqua;
+    padding: 25px
+}
+
+.sub-col {
+    background-color: darkcyan;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 45px;
+    height: 200px
+}
+p{
+    margin:0;padding:0
+}
+.nav-bar {
+    margin-bottom: 7px;
+    font-weight: bold;
+    background-color: cadetblue;
+}
+.nav-bar .nav-container{
+    height:75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: coral;
+    text-align: center;
+    font-size: 35px;font-family:'Permanent Marker', cursive;
+    font-weight:bold
+}
+.nav-bar .nav-container .column button {
+    text-align: center;
+    border-radius: 7px;
+    border: 2px solid #cc54ae;
+    width: fit-content;
+    margin: 5px;
+    padding: 0px 15px 0px 15px;
+    font-size:20px;color:#cc54ae;
+}
+h5 span{
+    color:#cc54ae;
+}
+.page-sec {
+    padding: 0px 0px 45px 0px;
+}
+
+.page-content {
+    top: 25px;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 7px;
+    width: 100%;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+}
+
+.page-sec .page-content button {
+    top: 50%;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid #73AD21;
+    width: fit-content;
+    margin: 0px 10px 0px 10px;
+    padding: 10px;
+}
+button {text-align: center;border-radius: 15px; border: 2px solid #73AD21; width: fit-content; margin: 5px; padding: 10px;}

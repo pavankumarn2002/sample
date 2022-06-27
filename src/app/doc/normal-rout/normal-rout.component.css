@@ -1,0 +1,13 @@
+.normal {
+    padding: 25px;
+    background-color: cornflowerblue;
+}
+.link-items{
+    margin-bottom:45px;
+}
+a{
+    color:rgb(124, 92, 45);margin-right:25px;font-size: 17px;
+}
+a:hover{
+    color:white;font-weight: bold;
+}

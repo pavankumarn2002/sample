@@ -1,0 +1,11 @@
+<div class="">
+    <button (click)="tab=!tab">Subject</button>
+</div>
+<div *ngIf="tab==true" style="margin:10px" class="card-deck">
+    <div style="text-align: center;  
+font-size: x-large;  
+font-family: monospace;">Example of Subject in RxJs</div>
+    <app-subject-one></app-subject-one>
+    <app-subject-two></app-subject-two>
+    <app-subject-three></app-subject-three>
+</div>

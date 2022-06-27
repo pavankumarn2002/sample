@@ -1,0 +1,175 @@
+<h2 class="mt-1"><u>1.Structural Directives</u></h2>
+<!--Directives #ngIf-->
+<div class="sub-directives">
+    <!--Directives #ngIf-->
+    <h3 class="mt-4 mb-2">*ngIf</h3>
+    <div *ngIf="conditionVariable; else ref">
+        <h5>Displays conditionVariable=true</h5>
+    </div>
+    <ng-template #ref>
+        <h5>Displays conditionVariable=false</h5>
+    </ng-template>
+
+    <!--Directives #ngIf With Event binding-->
+    <h3 class="mt-4 mb-2">*ngIf with (click) event binding</h3>
+    <button class="mt-2 mb-2" (click)="show = !show">{{show ? 'Primary' : 'Secondary'}}</button>
+
+    <div class="mt-2 mb-2" *ngIf="show; else elseBlock">
+        <h5>Primary Text</h5>
+    </div>
+    <ng-template class="mt-2 mb-2" #elseBlock>
+        <h5>Secondary Text</h5>
+    </ng-template>
+</div>
+<!--Directives #ngFor -->
+<div class="sub-directives">
+    <h2 class="mt-5 mb-5">*ngFor</h2>
+    <div class="col-12">
+        <div class="row" *ngFor="let list of lists | power">
+            <div class="col">{{list.firstName}}</div>
+            <div class="col">{{list.lastName}}</div>
+        </div>
+    </div>
+    <h2 class="mt-5 mb-5">*ngFor With *ngIf</h2>
+    <div class="col-12">
+        <table class="table">
+            <tr *ngFor="let list of lists">
+                <td *ngIf="list.firstName== 'Susan'">
+                    {{list.firstName}}
+                </td>
+                <td *ngIf="list.lastName== 'Black'">
+                    {{list.lastName}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2 class="mt-5 mb-5">*ngFor With *ngIf & Custom Message</h2>
+    <div class="col-12">
+        <h3>First Name</h3>
+        <div class="row" *ngFor="let list of lists | power">
+            <div *ngIf="list.firstName== 'Zex'">
+                <div class="" [ngClass]="ele()"></div>
+                <div class="col">{{list.firstName}}</div>
+            </div>
+        </div>
+        <div class="result-message">
+            <div class="no-data" *ngIf="variable=='No'">No Results Found</div>
+        </div>
+        <h3>Last Name</h3>
+        <div class="row" *ngFor="let list of lists | power">
+            <div *ngIf="list.lastName== 'Black'">
+                <div class="" [ngClass]="ele1()"></div>
+                <div class="col">{{list.lastName}}</div>
+            </div>
+        </div>
+        <div class="result-message">
+            <div class="no-data" *ngIf="variable1=='No'">No Results Found</div>
+        </div>
+    </div>
+    <h2 class="mt-5 mb-5">*ngFor In Select</h2>
+    <div class="col-12">
+        <select>
+            <optgroup *ngFor="let list of lists">
+                <option>{{list.firstName}}</option>
+            </optgroup>
+        </select>
+    </div>
+    <h2 class="mt-5 mb-5">*ngFor In Input Select</h2>
+    <div class="col-12">
+        <input type="text" name="example" list="exampleList">
+        <datalist id="exampleList">
+            <optgroup *ngFor="let list of lists">
+                <option>{{list.firstName}}</option>
+            </optgroup>
+        </datalist>
+    </div>
+    <h2 class="mt-5 mb-5">*ngFor In Input Filter Concept For Arrays</h2>
+    <div class="col-12">
+        <input type="text" name="example" list="exampleList2" [ngModel]="searchNames1"
+            (ngModelChange)="searchArr($event)">
+        <div id="exampleList2">
+            <div *ngFor="let listy of y1">
+                <div class="text-left">{{listy}}</div>
+            </div>
+            <div class="text-left" *ngIf="noData1=='No Data Found'"><h5>No Data Found</h5></div>
+            <div class="text-left" *ngIf="noData1=='Enter Valid Input'"><h5>Please Enter Valid Input</h5></div>
+        </div>
+    </div>
+    <h2 class="mt-5 mb-5">*ngFor In Input Select With Filter Concept For Array of Objects</h2>
+    <div class="col-12">
+        <input type="text" name="example" list="exampleList1" [ngModel]="searchNames"
+            (ngModelChange)="searchObj($event)">
+        <datalist id="exampleList1">
+            <optgroup *ngFor="let listx of x1">
+                <option>{{listx.firstName}}</option>
+            </optgroup>
+        </datalist>
+        <div class="text-left" *ngIf="noData=='No Data Found'"><h5>No Data Found</h5></div>
+        <div class="text-left" *ngIf="noData=='Enter Valid Input'"><h5>Please Enter Valid Input</h5></div>
+    </div>
+    <!--Directives #ngFor Nested-->
+    <h2 class="mt-5 mb-5">*ngFor For Nested Data</h2>
+    <div class="row" *ngFor="let list of obj">
+        <div class="row" *ngFor="let list1 of list.fieldset | power">
+            <div class="row" *ngFor="let list2 of list1.fieldset | power">
+                <div class="row" *ngFor="let list3 of list2.field | power">
+                    <div class="col">{{list3.label.plain}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sub-directives">
+    <h1 class="mt-5 mb-5"><u>[ngSwitch]</u></h1>
+
+    <h3 class="mt-1 mb-1">[ngSwitch] Using two way data binding [(ngModel)] </h3>
+
+    <div class='card'>
+        <div class='card-header'>
+            ngSwitch Example
+        </div>
+        <div class="card-body">
+            Input string : <input type='text' [(ngModel)]="num" />
+            <div [ngSwitch]="num">
+                <div *ngSwitchCase="'1'">One</div>
+                <div *ngSwitchCase="'2'">Two</div>
+                <div *ngSwitchCase="'3'">Three</div>
+                <div *ngSwitchCase="'4'">Four</div>
+                <div *ngSwitchCase="'5'">Five</div>
+                <div *ngSwitchDefault>This is Default</div>
+            </div>
+        </div>
+    </div>
+    <div class='card mt-5'>
+        <div class='card-header'>
+            ngSwitch Example
+        </div>
+        <div class="card-body">
+            <div [ngSwitch]="date">
+                <div *ngSwitchCase="'0'">
+                    <h4>Today Is Sunday</h4>
+                </div>
+                <div *ngSwitchCase="'1'">
+                    <h4>Today Is Monday</h4>
+                </div>
+                <div *ngSwitchCase="'2'">
+                    <h4>Today Is Tuesday</h4>
+                </div>
+                <div *ngSwitchCase="'3'">
+                    <h4>Today Is Wednesday</h4>
+                </div>
+                <div *ngSwitchCase="'4'">
+                    <h4>Today Is Thursday</h4>
+                </div>
+                <div *ngSwitchCase="'5'">
+                    <h4>Today Is Friday</h4>
+                </div>
+                <div *ngSwitchCase="'5'">
+                    <h4>Today Is Saturday</h4>
+                </div>
+                <div *ngSwitchDefault>This is Default</div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,35 @@
+.main {
+    color: blue;
+    background-color: red;
+    border-radius: 0;
+    border: 1px solid blue;
+}
+.sub-directives:nth-child(even) {
+    background-color: coral;
+    padding: 25px;
+    text-align: center
+}
+
+.sub-directives:nth-child(odd) {
+    background-color: crimson;
+    padding: 25px;
+    text-align: center
+}
+.sub {
+    color: red;
+    background-color: blue;
+    border-radius: 7px;
+    border: 1px solid red;
+}
+.result-message{
+    display:flex;flex-direction: column;align-items: center;
+}
+.no-data {
+    width: max-content;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: bisque;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}

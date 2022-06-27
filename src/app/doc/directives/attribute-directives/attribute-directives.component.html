@@ -1,0 +1,15 @@
+<h2 class="mt-1"><u>1.Attribute Directives</u></h2>
+<div class="sub-directives">
+    <h3 class="mt-4 mb-2">a. [ngClass] Binding</h3>
+    <button class="mt-2 mb-2" (click)="attrDr = !attrDr" [ngClass]="attrDr? 'sub' : 'main'">{{attrDr ?
+        'Blue' :
+        'Red'}}</button>
+    <h2 [ngClass]="attrDr? 'main' : 'sub'">Resources</h2>
+
+    <h3 class="mt-4 mb-2">b. [ngStyle] Binding</h3>
+    <button class="mt-2 mb-2" (click)="attrDrs = !attrDrs" [ngStyle]="attrDrs? subs : mains">{{attrDrs ?
+        'Blue'
+        :
+        'Red'}}</button>
+    <h2 [ngStyle]="attrDrs? mains : subs">Resources</h2>
+</div>

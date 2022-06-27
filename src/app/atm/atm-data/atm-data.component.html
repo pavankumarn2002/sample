@@ -1,0 +1,33 @@
+<input type="text" name="example" list="exampleList1" [(ngModel)]="searchNames1"
+ (ngModelChange)="searchObj($event)" placeholder="Please Enter Account Number">
+<datalist id="exampleList1">
+    <optgroup *ngFor="let atm of x1">
+        <option>{{ atm.accountNo }}</option>
+    </optgroup>
+</datalist>
+<div class="container atm-data">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td>Account Number</td>
+            <td>Date</td>
+            <td>Actions</td>
+            <td>Transaction</td>
+        </tr>
+        <tr *ngFor="let data of atmData">
+            <td *ngIf="data.accountNo==searchNames1">{{data.name}}</td>
+            <td *ngIf="data.accountNo==searchNames1">{{data.accountNo}}</td>
+            <td *ngIf="data.accountNo==searchNames1">{{data.date}}</td>
+            <td *ngIf="data.accountNo==searchNames1">
+                <button class="view" [routerLink]="['/atm/atm-view', data.id]">view</button>
+                <button class="edit" [routerLink]="['/atm/atm-edit', data.id]">edit</button>
+                <button class="delete" (click)="deletePost(data.id)">delete</button>
+            </td>
+            <td *ngIf="data.accountNo==searchNames1">
+            <button [routerLink]="['/atm/atm-transaction',data.id]">Transaction</button>
+           </td>
+        </tr>
+    </table>
+    <div class="text-left" *ngIf="noData=='No Data Found'"><h5>No Data Found</h5></div>
+    <div class="text-left" *ngIf="noData=='Enter Valid Input'"><h5>Please Enter Valid Input</h5></div>
+</div>

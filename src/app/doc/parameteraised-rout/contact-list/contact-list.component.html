@@ -1,0 +1,16 @@
+<div class="container sub-parameteraised ">
+<table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let contact of contacts" >
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.email }}</td> 
+      <td>
+      <a [routerLink]="['/doc/parameteraised-rout/contact', contact.id]">Go to details</a>
+      </td>
+    </tr>
+  </table>
+</div>

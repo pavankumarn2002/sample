@@ -1,0 +1,30 @@
+<div class="container register-container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h3>Register</h3>
+        <p>{{message}}</p>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+          <div class="col form-group">
+            <label for="accountNo">userid :</label>
+            <input formControlName="userid" id="userid" type="text" class="form-control">
+            <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
+              <div *ngIf="f['userid'].errors && f['userid'].errors['required']">Account Number Is Required.
+              </div>
+            </div>
+          </div>
+  
+          <div class="col form-group">
+            <label for="name">password :</label>
+            <input formControlName="password" id="password" type="text" class="form-control">
+            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+              <div *ngIf="f['password'].errors && f['password'].errors['required']">password Is Required.</div>
+            </div>
+          </div>
+          
+          <div class="col-xs-12 form-group text-right register-area">
+            <button class="btn" type="submit">Generate New Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

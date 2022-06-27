@@ -1,0 +1,33 @@
+<div class="container index-container">
+  <h1>Angular 13 CRUD Example With Search Input Select</h1>
+
+  <a href="#" routerLink="/post/create/" class="mt-2 mb-2 btn btn-success">Create New Post</a>
+
+  <input type="text" name="example" list="exampleList1" [(ngModel)]="searchNames1" (ngModelChange)="searchObj($event)">
+  <datalist id="exampleList1">
+    <optgroup *ngFor="let post of x1">
+      <option>{{ post.title }}</option>
+    </optgroup>
+  </datalist>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let post of x1" class="">
+      <td width="4%">{{ post.id }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+      <td width="20%">
+        <a href="#" [routerLink]="['/doc/crud-operation/view-data', post.id]" class="btn btn-info view">View</a>
+        <a href="#" [routerLink]="['/doc/crud-operation/', post.id, 'edit']"
+          class="btn btn-primary edit">Edit</a>
+        <button type="button" (click)="deletePost(post.id)" class="btn btn-danger delete">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <div class="text-left" *ngIf="noData=='No Data Found'"><h5>No Data Found</h5></div>
+  <div class="text-left" *ngIf="noData=='Enter Valid Input'"><h5>Please Enter Valid Input</h5></div>
+</div>

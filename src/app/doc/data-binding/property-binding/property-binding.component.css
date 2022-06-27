@@ -1,0 +1,17 @@
+.sub-bind {
+    background-color:crimson;padding:25px;text-align:center
+}
+
+.main {
+    color: blue;
+    background-color: red;
+    border-radius: 0;
+    border: 1px solid blue;
+}
+
+.sub {
+    color: red;
+    background-color: blue;
+    border-radius: 7px;
+    border: 1px solid red;
+}

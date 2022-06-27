@@ -1,0 +1,22 @@
+<div class="sub-bind">
+<h2 class="mt-2 mb-2"><u>2. Property Data Binding</u></h2>
+
+<h3 class=" mb-2">a. Attribute Data Binding</h3>
+<img [src]="path" />
+
+<h3 class="mt-4 mb-2">Types Of properties In Property Binding</h3>
+<h4 [innerText]="title"></h4>
+<h3>Example 1</h3>
+<button [disabled]="isDisabled">I am disabled</button>
+
+<h3 class="mt-4 mb-2">b. Class Binding</h3>
+<button class="mt-2 mb-2" (click)="checks = !checks" [class]="checks? 'sub' : 'main'">{{checks ? 'Blue' :
+    'Red'}}</button>
+<h2 [class]="checks? 'main' : 'sub'">Resources</h2>
+
+<h3 class="mt-4 mb-2">c. Style Binding</h3>
+<button class="mt-2 mb-2" (click)="check = !check" [style]="check? subs : mains">{{check ?
+    'Blue' :
+    'Red'}}</button>
+<h2 [style]="check? mains : subs">Resources</h2>
+</div>

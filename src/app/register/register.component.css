@@ -1,0 +1,27 @@
+.register-container {
+    padding: 25px;
+    height: max-content
+  }
+  h3{
+    color: #cc54ae;
+  }
+  label{
+    font-weight:700;
+  }
+  .register-area {
+    margin-top: 25px;
+  }
+  .form-group{
+    margin-top:15px
+  }
+  .register-area button {
+    text-align: center;
+    border-radius: 7px;
+    border: 2px solid #cc54ae;
+    width: fit-content;
+    margin: 5px;
+    padding: 0px 15px 0px 15px;
+    font-size: 20px;
+    color: #cc54ae;
+    background-color: rgb(235, 235, 235);
+  }

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="tabs">
+    <h2 class="mt-2 mb-2"><u>Tabs</u></h2>
+    <div>
+      <button (click)="currentTab = 'Tab1'">Tab1</button>
+      <button (click)="currentTab = 'Tab2'">Tab2</button>
+      <button (click)="currentTab = 'Tab3'">Tab3</button>
+    </div>
+    <app-tab-one *ngIf="currentTab === 'Tab1'"></app-tab-one>
+    <app-tab-two *ngIf="currentTab === 'Tab2'"></app-tab-two>
+    <app-sub-tab *ngIf="currentTab === 'Tab3'"></app-sub-tab>
+    <router-outlet></router-outlet>
+  </div>
+</div>

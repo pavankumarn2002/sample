@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="normal">
+    <h2 class="mt-2 mb-2"><u>Normal Routers</u></h2>
+    <div class="link-items">
+      <a [routerLink]="'first'">
+        first
+      </a>
+      <a [routerLink]="'second'">
+        second
+      </a>
+      <a [routerLink]="'first/sub-fir'" class="mt-5">sub-fir</a>
+      <a [routerLink]="'second/sub-sec'" class="mt-5">sub-sec</a>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
