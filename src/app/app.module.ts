@@ -27,7 +27,6 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
     PostModule,
     DocModule ,
     ReactiveFormsModule

@@ -1,0 +1,45 @@
+<div class="container hooks">
+    <div class="content">
+        <h5><span>Constructor() :-</span> Constructor is the default method for a class that is created when a class is
+            installed</h5>
+        <span>Usage :-</span>
+        <p>Ite is used to pass dependency injuction of a class as a parameter,accessing variables and functions using
+            this key word</p>
+        <h5><span>ngOnChanges() :-</span> When an input/output binding value changes.</h5>
+        <span>Usage :-</span>
+        <p>Use ngOnChanges whenever you want to detect changes from a variable decorated by @Input. Remember that only
+            changes from the parent component will trigger this function.</p>
+        <p>Also remember that changes from the parent still update the child value even without implementing
+            ngOnChanges. ngOnChanges simply adds the benefit of tracking those changes with previous and current value.
+        </p>
+        <h5><span>ngOnInit() :-</span> ngOnInit gets called only once when the component is initialized and after
+            ngOnChanges</h5>
+        <span>Usage :-</span>
+        <p>As it gets called after component initialized so,it is better to use for api calls</p>
+        <p>Use ngOnInit() whenever you want to execute code when the component is FIRST initialized. Remember that
+            ngOnInit() only fires once after data-bound properties are set. This means ngOnInit() will execute if you
+            refresh your browser or first initialize a component but not when other events occur</p>
+        <h5><span>ngDoCheck() :-</span> ngDoCheck() is called immediately after ngOnChanges() and ngOnInit().</h5>
+        <span>Usage :-</span>
+        <p>It is used to check both in parent and child components for @Input Value changes where as ngOnChange will
+            gives result for child component @Input value changes</p>
+        <h5><span>ngAfterContentInit() :-</span> runs once after the first ngDoCheck().</h5>
+        <span>Usage :-</span>
+        <p> This is called after components external content has been initialized.</p>
+        <h5><span>ngAfterContentChecked() :-</span>is called directly after ngAfterContentInit and is called after every subsequent ngDoCheck</h5>
+        <span>Usage :-</span>
+        <p>Use ngAfterContentChecked whenever you want to call a lifecycle event hook immediately after ngDoCheck.</p>
+        <p>ngAfterContentChecked can be useful if you want to implement additional initialization tasks after Angular has fully initialized the component/directive's content.</p>
+        <h5><span>ngAfterViewInit() :-</span> is called once after ngAfterContentChecked and is called after all child components are initialized and checked.</h5>
+        <span>Usage :-</span>
+        <p>ngAfterViewInit is useful when you want to call a lifecycle hook after all child components have been initialized and checked</p>
+        <h5><span>ngAfterViewChecked() :-</span> is called after ngAfterContentInit and is called after every subsequent ngAfterContentChecked.</h5>
+        <span>Usage :-</span>
+        <p>ngAfterViewChecked is useful when you want to call a lifecycle hook after all child components have been initialized and checked.</p>
+        <h5><span>ngOnDestroy() :-</span> gets called when a component is about to be destroyed</h5>
+        <span>Usage :-</span>
+        <p>Using ngOnDestroy makes sense when you want to implement customized behavior when a component is destroyed.</p>
+        <p>ngOnDestroy can be helpful when you need to unsubscribe from observables or perform any other clean up when destroying a component.</p>
+    </div>
+    <app-hooks-parent></app-hooks-parent>
+</div>

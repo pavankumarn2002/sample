@@ -1,0 +1,13 @@
+span{
+    color:#cc54ae
+}
+button {text-align: center;border-radius: 7px; border: 2px solid #cc54ae; width: fit-content; margin: 5px; padding: 0px 15px 0px 15px;}
+.rf-button{
+    background-color: #ff4136;
+}
+.rf-left-float{
+    background-color:#b2ebeb
+}
+.rf-right-float{
+    background-color:#b2ebeb
+}

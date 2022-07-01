@@ -44,6 +44,9 @@ import { LoginComponent } from './authentication/login/login.component';
 import { AuthGuard } from './authentication/service/auth.guard';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { RegisterComponent } from './authentication/register/register.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { HooksParentComponent } from './hooks/hooks-parent/hooks-parent.component';
+import { HooksChildComponent } from './hooks/hooks-parent/hooks-child/hooks-child.component';
 const routes: Routes = [{
   path: '', component: DocComponent,
   children: [
@@ -148,6 +151,15 @@ const routes: Routes = [{
         { path: 'login', component: LoginComponent },
         { path: 'register', component: RegisterComponent },
         { path: '**', redirectTo: '' }
+      ]
+    },
+    {
+      path: 'hooks', component: HooksComponent, children: [
+        {
+          path: 'hooks-parent', component: HooksParentComponent, children: [
+            { path: 'hooks-child', component: HooksChildComponent }
+          ]
+        }
       ]
     }
   ]

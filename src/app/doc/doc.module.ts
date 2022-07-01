@@ -62,6 +62,9 @@ import { LoginComponent } from './authentication/login/login.component';
 import { DashboardComponent } from './authentication/dashboard/dashboard.component';
 import { ServiceComponent } from './authentication/service/service.component';
 import { RegisterComponent } from './authentication/register/register.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { HooksParentComponent } from './hooks/hooks-parent/hooks-parent.component';
+import { HooksChildComponent } from './hooks/hooks-parent/hooks-child/hooks-child.component';
 
 @NgModule({
   declarations: [
@@ -119,7 +122,10 @@ import { RegisterComponent } from './authentication/register/register.component'
     LoginComponent,
     DashboardComponent,
     ServiceComponent,
-    RegisterComponent
+    RegisterComponent,
+    HooksComponent,
+    HooksParentComponent,
+    HooksChildComponent
   ],
   imports: [
     CommonModule,

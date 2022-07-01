@@ -11,6 +11,8 @@ export class BehaviourTwoComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+  ngAfterViewInit() {
+  }
   subReceive() {
     this.subjectService.getPosts().subscribe((res: any) => {
       this.subjectReceive = res;
