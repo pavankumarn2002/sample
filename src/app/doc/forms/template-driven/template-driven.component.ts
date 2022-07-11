@@ -56,5 +56,8 @@ export class TemplateDrivenComponent implements OnInit {
   onFormSubmit() {
     console.log("Full Address", this.model);  
   }
+  onSubmit(contactForm:any){
+    console.log(contactForm)
+  }
 }
  

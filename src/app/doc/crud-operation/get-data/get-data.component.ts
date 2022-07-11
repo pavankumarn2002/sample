@@ -10,9 +10,10 @@ export class GetDataComponent implements OnInit {
 
 namesArr:any;
   posts: Crud[] = [];
-
+  searchNames1: any;
+  x1: any ;
+  noData: string = '';
   constructor(public postService: CrudService) { 
- 
   }
 
   ngOnInit(): void {
@@ -20,19 +21,15 @@ namesArr:any;
       this.posts = data;
     })  
   }
-
   deletePost(id:number){
     this.postService.delete(id).subscribe((res:any) => {
          this.posts = this.posts.filter(item => item.id !== id);
          console.log('Post deleted successfully!');
+         this.searchObj(this.searchNames1)
     })
   }
-  searchNames1: any;
-  x1: any ;
-  noData: string = '';
   searchObj(searchNames1: any){
     let fil = searchNames1;
-   
     let fil_arr = this.posts.map((element:any) =>
       element.title.substr(0, fil.length)
     )

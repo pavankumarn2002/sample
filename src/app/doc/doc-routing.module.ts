@@ -47,6 +47,8 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { HooksComponent } from './hooks/hooks.component';
 import { HooksParentComponent } from './hooks/hooks-parent/hooks-parent.component';
 import { HooksChildComponent } from './hooks/hooks-parent/hooks-child/hooks-child.component';
+import { CreateDataComponent } from './crud-operation/create-data/create-data.component';
+import { EditDataComponent } from './crud-operation/edit-data/edit-data.component';
 const routes: Routes = [{
   path: '', component: DocComponent,
   children: [
@@ -118,7 +120,9 @@ const routes: Routes = [{
     {
       path: 'crud-operation', component: CrudOperationComponent, children: [
         { path: 'get-data', component: GetDataComponent },
-        { path: 'view-data/:postId', component: ViewDataComponent }
+        { path: 'view-data/:postId', component: ViewDataComponent },
+        { path: ':postId/edit-data', component: EditDataComponent },
+        { path: 'create-data', component:CreateDataComponent }
       ]
     },
     {

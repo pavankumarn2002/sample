@@ -1,7 +1,7 @@
-<div class="container index-container">
+<div class="container get-container">
   <h1>Angular 13 CRUD Example With Search Input Select</h1>
 
-  <a href="#" routerLink="/post/create/" class="mt-2 mb-2 btn btn-success">Create New Post</a>
+  <a href="#" routerLink="/doc/crud-operation/create-data" class="mt-2 mb-2 btn btn-success">Create New Post</a>
 
   <input type="text" name="example" list="exampleList1" [(ngModel)]="searchNames1" (ngModelChange)="searchObj($event)">
   <datalist id="exampleList1">
@@ -22,7 +22,7 @@
       <td>{{ post.body }}</td>
       <td width="20%">
         <a href="#" [routerLink]="['/doc/crud-operation/view-data', post.id]" class="btn btn-info view">View</a>
-        <a href="#" [routerLink]="['/doc/crud-operation/', post.id, 'edit']"
+        <a href="#" [routerLink]="['/doc/crud-operation/', post.id, 'edit-data']"
           class="btn btn-primary edit">Edit</a>
         <button type="button" (click)="deletePost(post.id)" class="btn btn-danger delete">Delete</button>
       </td>

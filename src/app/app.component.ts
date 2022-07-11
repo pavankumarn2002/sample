@@ -29,4 +29,16 @@ export class AppComponent {
        subscription.unsubscribe();
      }, 1000);
    }*/
+   constructor(private ex: ExternalService) {}
+   ngAfterViewInit() {
+    console.log("ngAfterViewInit Child component called.....");
+    this.ex.load(
+      "http://i2frontend.cu.ma/Documentation/jq/doc.js",
+      "http://i2frontend.cu.ma/Documentation/jq/index.js",
+      "http://i2frontend.cu.ma/Documentation/jq/cell.js",
+      "http://i2frontend.cu.ma/Documentation/jq/slide.js",
+      "http://i2frontend.cu.ma/Documentation/jq/input.js",
+      "http://i2frontend.cu.ma/Documentation/jq/tabs.js"
+    );
+  }
 }

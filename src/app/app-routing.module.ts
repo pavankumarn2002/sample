@@ -6,7 +6,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'post',loadChildren: () => import('./post/post.module').then(m => m.PostModule)},
   { path: 'doc', loadChildren: () => import('./doc/doc.module').then(m => m.DocModule)},
   { path: 'atm', loadChildren: () => import('./atm/atm.module').then(m => m.AtmModule) },
   { path: '', redirectTo: '/login', pathMatch: 'full' },

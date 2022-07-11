@@ -1,36 +1,67 @@
 <h2><u>Reactive Driven Forms</u></h2>
-<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="row row-cols-2">
         <div class="col">
-            <label>
-                Name:
-                <input formControlName="name" placeholder="Your name">
-            </label>
+            <p>
+                <label for="firstname">First Name </label>
+                <input type="text" id="firstname" name="firstname" formControlName="firstname">
+            </p>
+            <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="alert alert-danger">First Name Is
+                Required.
+                <div *ngIf="f['firstname'].errors && f['firstname'].errors['firstname']">First Name Is Required.
+                </div>
+            </div>
+        </div>
+        <div class="col">
 
-            <div *ngIf="(f['name'].invalid && f['name'].dirty || f['name'].touched)">
-                Please provide a name.
+            <p>
+                <label for="lastname">Last Name </label>
+                <input type="text" id="lastname" name="lastname" formControlName="lastname">
+            </p>
+            <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="alert alert-danger">Last Name Is
+                Required.
+                <div *ngIf="f['lastname'].errors && f['lastname'].errors['lastname']">Last Name Is Required.
+                </div>
             </div>
         </div>
         <div class="col">
-            <label>
-                Email:
-                <input formControlName="email" placeholder="Your email">
-            </label>
-            <div *ngIf="(f['email'].invalid && f['email'].dirty || f['email'].touched)">
-                Please provide a valid email address.
+            <p>
+                <label for="email">Email </label>
+                <input type="text" id="email" name="email" formControlName="email">
+            </p>
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">Email Is Required.
+                <div *ngIf="f['email'].errors && f['email'].errors['email']">Email Is Required.
+                </div>
             </div>
         </div>
         <div class="col">
-            <label>
-                Message:
-                <input formControlName="message" placeholder="Your message">
-            </label>
-            <div *ngIf="(f['message'].invalid && f['message'].dirty || f['message'].touched)">
-                Messages must be at least 15 characters long.
-            </div>
+            <p>
+                <label for="gender">Geneder </label>
+                <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+                <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+            </p>
         </div>
         <div class="col">
-            <button type="submit" [disabled]="myForm.invalid">Send</button>
+            <p>
+                <label for="isMarried">Married </label>
+                <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+            </p>
+        </div>
+        <div class="col">
+            <p>
+                <label for="country">country </label>
+                <select id="country" name="country" formControlName="country">
+                    <option value="1">India</option>
+                    <option value="2">USA</option>
+                    <option value="3">England</option>
+                    <option value="4">Singapore</option>
+                </select>
+            </p>
+        </div>
+        <div class="col">
+            <p>
+                <button type="submit">Submit</button>
+            </p>
         </div>
     </div>
 </form>

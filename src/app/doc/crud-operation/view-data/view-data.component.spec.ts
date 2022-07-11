@@ -5,7 +5,7 @@ import { ViewDataComponent } from './view-data.component';
 describe('ViewDataComponent', () => {
   let component: ViewDataComponent;
   let fixture: ComponentFixture<ViewDataComponent>;
-
+ 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ViewDataComponent ]

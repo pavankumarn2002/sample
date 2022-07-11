@@ -7,8 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { LoginComponent } from './login/login.component';
 
-import { PostModule } from './post/post.module';
-import { PostComponent } from './post/post.component';
 import { DocModule } from './doc/doc.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -17,7 +15,6 @@ import { RegisterComponent } from './register/register.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    PostComponent,
     DashboardComponent,
     LoginComponent,
     RegisterComponent
@@ -27,7 +24,6 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    PostModule,
     DocModule ,
     ReactiveFormsModule
   ],

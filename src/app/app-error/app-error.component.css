@@ -1,3 +1,6 @@
 .error{
    height:250px;display:flex;justify-content:center;align-items:center;font-weight:bold
 }
+a{
+   text-decoration:none;color:#cc54ae;font-weight:bold
+}

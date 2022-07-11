@@ -9,7 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewDataComponent implements OnInit {
   id!: number;
-  post!: Crud;
+  post: Crud={
+    id: 0,
+    title: '',
+    body: ''
+  };
   constructor(private contactService: CrudService, private route: ActivatedRoute) { }
 
   ngOnInit() {

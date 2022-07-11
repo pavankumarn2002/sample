@@ -50,6 +50,14 @@ export class CrudService {
         catchError(this.errorHandler)
       )
   }
+  find(id: number): Observable<any> {
+
+    return this.httpClient.get(this.apiURL + '/data/' + id)
+
+      .pipe(
+        catchError(this.errorHandler)
+      )
+  }
   delete(id: number) {
     return this.httpClient.delete(this.apiURL + '/data/' + id, this.httpOptions)
       .pipe(

@@ -21,7 +21,6 @@ export class HooksChildComponent implements  OnInit, OnChanges, DoCheck, AfterCo
   constructor(private ex: ExternalService) {
     console.log("constructor Child component called.....");
   }
-  
   ngOnChanges(changes: SimpleChanges) {
     console.log("ngOnChanges Child component called.....");
     console.log(changes);

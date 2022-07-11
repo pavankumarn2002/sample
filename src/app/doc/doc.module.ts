@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; 
 import { FormsModule } from '@angular/forms';
 
 import { DocRoutingModule } from './doc-routing.module';
@@ -7,6 +7,9 @@ import { DocComponent } from './doc.component';
 
 import { CrudOperationComponent } from './crud-operation/crud-operation.component';
 import { GetDataComponent } from './crud-operation/get-data/get-data.component';
+import { CreateDataComponent } from './crud-operation/create-data/create-data.component';
+import { EditDataComponent } from './crud-operation/edit-data/edit-data.component';
+import { ViewDataComponent } from './crud-operation/view-data/view-data.component';
 
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { EventBindingComponent } from './data-binding/event-binding/event-binding.component';
@@ -65,7 +68,6 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { HooksComponent } from './hooks/hooks.component';
 import { HooksParentComponent } from './hooks/hooks-parent/hooks-parent.component';
 import { HooksChildComponent } from './hooks/hooks-parent/hooks-child/hooks-child.component';
-
 @NgModule({
   declarations: [
     NgVarDirective,
@@ -103,6 +105,9 @@ import { HooksChildComponent } from './hooks/hooks-parent/hooks-child/hooks-chil
     TabTwoComponent,
     CrudOperationComponent,
     GetDataComponent,
+    CreateDataComponent,
+    EditDataComponent,
+    ViewDataComponent,
     ComponentInteractionComponent,
     AtInputComponent,
     ChildInputComponent,
