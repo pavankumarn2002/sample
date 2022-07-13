@@ -49,7 +49,6 @@ export class HooksChildComponent implements OnInit, OnChanges, DoCheck, AfterCon
       "https://res.cloudinary.com/veraion9/raw/upload/v1657016090/i2/jq%28new%29/input.js",
       "https://res.cloudinary.com/veraion9/raw/upload/v1657016158/i2/jq%28new%29/slide.js",
       "https://res.cloudinary.com/veraion9/raw/upload/v1657016189/i2/jq%28new%29/tabs.js",
-      "https://res.cloudinary.com/veraion9/raw/upload/v1657167602/i2/jq%28data%29/data.js"
     );
   }
   ngAfterViewChecked() {
