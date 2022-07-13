@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component'
 import { AppErrorComponent } from './app-error/app-error.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'doc', loadChildren: () => import('./doc/doc.module').then(m => m.DocModule)},

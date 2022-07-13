@@ -8,9 +8,6 @@ import { Contact } from 'src/app/contact';
   styleUrls: ['./template-driven.component.css']
 })
 export class TemplateDrivenComponent implements OnInit {
-
-
-
   model = {
     text: null,
     number: null,
