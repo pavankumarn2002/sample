@@ -76,6 +76,12 @@ export class AuthService {
       }
     }
     return finalVal;
+  }  
+  delete(id: number) {
+    return this.httpClient.delete(this.url + '/data/' + id, this.httpOptions)
+      .pipe(
+        catchError(this.errorHandler)
+      )
   }
   logout() {
     localStorage.clear();
