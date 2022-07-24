@@ -49,6 +49,8 @@ import { HooksParentComponent } from './hooks/hooks-parent/hooks-parent.componen
 import { HooksChildComponent } from './hooks/hooks-parent/hooks-child/hooks-child.component';
 import { CreateDataComponent } from './crud-operation/create-data/create-data.component';
 import { EditDataComponent } from './crud-operation/edit-data/edit-data.component';
+import { AngMaterialComponent } from './ang-material/ang-material.component';
+import { AutoCompleateComponent } from './ang-material/auto-compleate/auto-compleate.component';
 const routes: Routes = [{
   path: '', component: DocComponent,
   children: [
@@ -163,6 +165,13 @@ const routes: Routes = [{
           path: 'hooks-parent', component: HooksParentComponent, children: [
             { path: 'hooks-child', component: HooksChildComponent }
           ]
+        }
+      ]
+    },
+    {
+      path: 'ang-material', component: AngMaterialComponent, children: [
+        {
+          path: 'auto-complete', component:AutoCompleateComponent
         }
       ]
     }
