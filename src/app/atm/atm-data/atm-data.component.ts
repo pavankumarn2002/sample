@@ -11,7 +11,7 @@ export class AtmDataComponent implements OnInit {
   atmData:AtmData[]=[]
   currentBalance!:number;
   constructor(private atm:AtmServiceService,private inner:AtmInnerService) { 
-    this.atm.getAll().subscribe(element=>this.atmData=element);
+    this.atm.getAll().subscribe((elements:any)=>this.atmData=elements);
     
   }
   ngOnInit(): void {
@@ -49,6 +49,7 @@ export class AtmDataComponent implements OnInit {
         this.noData = 'Enter Valid Input';
       }
     })
+    console.log(this.x1[(this.x1.length-1)])
       this.currentBalance=this.x1[(this.x1.length-1)].balance
       this.inner.setPost(this.currentBalance);
 

@@ -28,9 +28,9 @@ export class AtmTransactionComponent implements OnInit {
     private route: ActivatedRoute,
     private inner: AtmInnerService,
   ) {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params:any) => {
       this.id = Number(params.get('id'));
-      this.atm.getElementById(this.id).subscribe(c => {
+      this.atm.getElementById(this.id).subscribe((c:any) => {
         this.data = c;
         this.currentAccountNo = this.data.accountNo
         this.currentName = this.data.name;
