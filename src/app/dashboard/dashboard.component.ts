@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
 
   id!: any;
   constructor(private router: Router, private authService: AuthService) { }
+ 
   ngOnInit() {
     this.id = localStorage.getItem('token');
     //console.log(this.id);  

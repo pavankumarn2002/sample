@@ -4,10 +4,21 @@ import { Observable, of, Subject, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SubjectService {
-
+  public loginToken = new BehaviorSubject(null);
   public subjectVar = new BehaviorSubject(null);
   constructor() {
   }
+  setLoginToken(tokenLog: any) {
+    this.loginToken.next(tokenLog);
+    console.log(tokenLog)
+  }
+
+  getLoginToken() {
+    return this.loginToken;
+  }
+
+
+
   setPost(post: any) {
     this.subjectVar.next(post);
   }

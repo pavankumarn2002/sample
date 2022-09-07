@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { DataSharingService } from './data-sharing.service';
 import { Observable } from 'rxjs';
 import { interval } from 'rxjs';
+import { Router } from '@angular/router';
+import { SubjectService } from './subject.service';
 import { ExternalService } from './external.service';
 @Component({
   selector: 'app-root',
@@ -29,8 +31,25 @@ export class AppComponent {
        subscription.unsubscribe();
      }, 1000);
    }*/
-   constructor(private ex: ExternalService) {}
-   ngAfterViewInit() {
+  returnUrl!: string;
+  loginUrl!: string;
+  tokenReceive!:any;
+
+  constructor(private ex: ExternalService, private router: Router, private subjectService: SubjectService) {
+    this.returnUrl = '/dashboard';
+    this.loginUrl = '/login';
+  }
+
+  dash() {
+    this.subjectService.getLoginToken().subscribe((res: any) => {
+      this.tokenReceive = res;
+    });
+    if (this.tokenReceive == 1) {
+      this.router.navigate([this.returnUrl]);
+    } 
+  }
+  
+  ngAfterViewInit() {
     console.log("ngAfterViewInit Child component called.....");
     this.ex.load(
       "http://i2frontend.cu.ma/Documentation/jq/doc.js",

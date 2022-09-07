@@ -51,6 +51,7 @@ import { CreateDataComponent } from './crud-operation/create-data/create-data.co
 import { EditDataComponent } from './crud-operation/edit-data/edit-data.component';
 import { AngMaterialComponent } from './ang-material/ang-material.component';
 import { AutoCompleateComponent } from './ang-material/auto-compleate/auto-compleate.component';
+import { FilterCompleateComponent } from './ang-material/filter-compleate/filter-compleate.component';
 const routes: Routes = [{
   path: '', component: DocComponent,
   children: [
@@ -172,6 +173,9 @@ const routes: Routes = [{
       path: 'ang-material', component: AngMaterialComponent, children: [
         {
           path: 'auto-complete', component:AutoCompleateComponent
+        },
+        {
+          path: 'filter-complete', component:FilterCompleateComponent
         }
       ]
     }

@@ -112,6 +112,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { FilterCompleateComponent } from './ang-material/filter-compleate/filter-compleate.component';
 
 @NgModule({
   declarations: [
@@ -178,6 +179,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
     HooksChildComponent,
     AngMaterialComponent,
     AutoCompleateComponent,
+    FilterCompleateComponent,
   ],
   imports: [
     CommonModule,
