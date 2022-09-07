@@ -16,160 +16,16 @@
         </div>
         <div cell-rf=[-fa] cell-bg=[-c2] cell-m=[-t75]
             class="">
-            <div cell-rf=[-c1] class="">
+            <div class="" *ngFor="let x of x1" cell-rf=[-c] class="">
                 <div class="">
-                    Float-1
-                </div>
-            </div>
-            <div cell-rf=[-c2] class="">
-                <div class="">
-                    Float-2
-                </div>
-            </div>
-            <div cell-rf=[-c3] class="">
-                <div class="">
-                    Float-3
-                </div>
-            </div>
-            <div cell-rf=[-c4] class="">
-                <div class="">
-                    Float-4
-                </div>
-            </div>
-            <div cell-rf=[-c5] class="">
-                <div class="">
-                    Float-5
-                </div>
-            </div>
-            <div cell-rf=[-c6] class="">
-                <div class="">
-                    Float-6
-                </div>
-            </div>
-            <div cell-rf=[-c7] class="">
-                <div class="">
-                    Float-7
-                </div>
-            </div>
-            <div cell-rf=[-c8] class="">
-                <div class="">
-                    Float-8
-                </div>
-            </div>
-            <div cell-rf=[-c9] class="">
-                <div class="">
-                    Float-9
-                </div>
-            </div>
-            <div cell-rf=[-c10] class="">
-                <div class="">
-                    Float-10
-                </div>
-            </div>
-            <div cell-rf=[-c11] class="">
-                <div class="">
-                    Float-11
-                </div>
-            </div>
-            <div cell-rf=[-c12] class="">
-                <div class="">
-                    Float-12
-                </div>
-            </div>
-            <div cell-rf=[-c13] class="">
-                <div class="">
-                    Float-13
-                </div>
-            </div>
-            <div cell-rf=[-c14] class="">
-                <div class="">
-                    Float-14
-                </div>
-            </div>
-            <div cell-rf=[-c15] class="">
-                <div class="">
-                    Float-15
-                </div>
-            </div>
-            <div cell-rf=[-c16] class="">
-                <div class="">
-                    Float-16
-                </div>
-            </div>
-            <div cell-rf=[-c17] class="">
-                <div class="">
-                    Float-17
-                </div>
-            </div>
-            <div cell-rf=[-c18] class="">
-                <div class="">
-                    Float-18
-                </div>
-            </div>
-            <div cell-rf=[-c19] class="">
-                <div class="">
-                    Float-19
-                </div>
-            </div>
-            <div cell-rf=[-c20] class="">
-                <div class="">
-                    Float-20
-                </div>
-            </div>
-            <div cell-rf=[-c21] class="">
-                <div class="">
-                    Float-21
-                </div>
-            </div>
-            <div cell-rf=[-c22] class="">
-                <div class="">
-                    Float-22
-                </div>
-            </div>
-            <div cell-rf=[-c23] class="">
-                <div class="">
-                    Float-23
-                </div>
-            </div>
-            <div cell-rf=[-c24] class="">
-                <div class="">
-                    Float-24
-                </div>
-            </div>
-            <div cell-rf=[-c25] class="">
-                <div class="">
-                    Float-25
+                    Float-{{x}}
                 </div>
             </div>
         </div>
         <div cell-rf=[-bu] cell-Q=[-q-cc] cell-m=[-t75]
             class="">
             <button class="btn rf-button">close</button>
-            <button class="btn rf-button active">1</button>
-            <button class="btn rf-button">2</button>
-            <button class="btn rf-button">3</button>
-            <button class="btn rf-button">4</button>
-            <button class="btn rf-button">5</button>
-            <button class="btn rf-button">6</button>
-            <button class="btn rf-button">7</button>
-            <button class="btn rf-button">8</button>
-            <button class="btn rf-button">9</button>
-            <button class="btn rf-button">10</button>
-            <button class="btn rf-button">11</button>
-            <button class="btn rf-button">12</button>
-            <button class="btn rf-button">13</button>
-            <button class="btn rf-button">14</button>
-            <button class="btn rf-button">15</button>
-            <button class="btn rf-button">16</button>
-            <button class="btn rf-button">17</button>
-            <button class="btn rf-button">18</button>
-            <button class="btn rf-button">19</button>
-            <button class="btn rf-button">20</button>
-            <button class="btn rf-button">21</button>
-            <button class="btn rf-button">22</button>
-            <button class="btn rf-button">23</button>
-            <button class="btn rf-button">24</button>
-            <button class="btn rf-button">25</button>
+            <button *ngFor="let x of x1" class="btn rf-button">{{x}}</button>
         </div>
     </div>
   </div>

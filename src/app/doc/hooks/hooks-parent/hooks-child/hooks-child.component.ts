@@ -18,8 +18,18 @@ import { ExternalService } from 'src/app/external.service';
 })
 export class HooksChildComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   @Input() parentData: any;
+  x1:any[]=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
   constructor(private ex: ExternalService) {
     console.log("constructor Child component called.....");
+    this.ex.load(
+      "https://res.cloudinary.com/veraion9/raw/upload/v1658938994/i2/jq%28dynamic%29/doc.js",
+      "https://res.cloudinary.com/veraion9/raw/upload/v1658908893/i2/jq%28dynamic%29/cell.js",
+      "https://res.cloudinary.com/veraion9/raw/upload/v1658938953/i2/jq%28dynamic%29/index.js",
+      "https://res.cloudinary.com/veraion9/raw/upload/v1658909046/i2/jq%28dynamic%29/input.js",
+      "https://res.cloudinary.com/veraion9/raw/upload/v1658912742/i2/jq%28dynamic%29/slide.js",
+      "https://res.cloudinary.com/veraion9/raw/upload/v1658942369/i2/jq%28dynamic%29/tabs.js",
+      
+    )
   }
   ngOnChanges(changes: SimpleChanges) {
     console.log("ngOnChanges Child component called.....");
@@ -44,11 +54,7 @@ export class HooksChildComponent implements OnInit, OnChanges, DoCheck, AfterCon
   ngAfterViewInit() {
     console.log("ngAfterViewInit Child component called.....");
     this.ex.load(
-      "https://res.cloudinary.com/veraion9/raw/upload/v1657016045/i2/jq%28new%29/index.js",
-      "https://res.cloudinary.com/veraion9/raw/upload/v1657015996/i2/jq%28new%29/cell.js",
-      "https://res.cloudinary.com/veraion9/raw/upload/v1657016090/i2/jq%28new%29/input.js",
-      "https://res.cloudinary.com/veraion9/raw/upload/v1657016158/i2/jq%28new%29/slide.js",
-      "https://res.cloudinary.com/veraion9/raw/upload/v1657016189/i2/jq%28new%29/tabs.js",
+   
     );
   }
   ngAfterViewChecked() {
