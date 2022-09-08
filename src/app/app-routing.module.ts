@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'doc', loadChildren: () => import('./doc/doc.module').then(m => m.DocModule)},
   { path: 'atm', loadChildren: () => import('./atm/atm.module').then(m => m.AtmModule) },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'dashboard', component:DashboardComponent,canActivate: [AuthGuard]},
+  { path: 'dashboard', component:DashboardComponent},
   { path: 'register', component: RegisterComponent },
   { path:'**', component:AppErrorComponent },
 ];
