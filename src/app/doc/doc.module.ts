@@ -113,6 +113,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { FilterCompleateComponent } from './ang-material/filter-compleate/filter-compleate.component';
+import { BadgesComponent } from './ang-material/badges/badges.component';
+import { ButtonsComponent } from './ang-material/buttons/buttons.component';
+import { ToggleButtonComponent } from './ang-material/toggle-button/toggle-button.component';
+import { CardsComponent } from './ang-material/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -180,6 +184,10 @@ import { FilterCompleateComponent } from './ang-material/filter-compleate/filter
     AngMaterialComponent,
     AutoCompleateComponent,
     FilterCompleateComponent,
+    BadgesComponent,
+    ButtonsComponent,
+    ToggleButtonComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,

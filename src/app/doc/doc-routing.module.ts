@@ -52,6 +52,10 @@ import { EditDataComponent } from './crud-operation/edit-data/edit-data.componen
 import { AngMaterialComponent } from './ang-material/ang-material.component';
 import { AutoCompleateComponent } from './ang-material/auto-compleate/auto-compleate.component';
 import { FilterCompleateComponent } from './ang-material/filter-compleate/filter-compleate.component';
+import { BadgesComponent } from './ang-material/badges/badges.component';
+import { ButtonsComponent } from './ang-material/buttons/buttons.component';
+import { ToggleButtonComponent } from './ang-material/toggle-button/toggle-button.component';
+import { CardsComponent } from './ang-material/cards/cards.component';
 const routes: Routes = [{
   path: '', component: DocComponent,
   children: [
@@ -176,6 +180,18 @@ const routes: Routes = [{
         },
         {
           path: 'filter-complete', component:FilterCompleateComponent
+        },
+        {
+          path: 'badges', component:BadgesComponent
+        },
+        {
+          path: 'buttons', component:ButtonsComponent
+        },
+        {
+          path: 'toggle-buttons', component:ToggleButtonComponent
+        },
+        {
+          path: 'cards', component:CardsComponent
         }
       ]
     }
