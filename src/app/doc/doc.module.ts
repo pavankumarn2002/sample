@@ -117,6 +117,10 @@ import { BadgesComponent } from './ang-material/badges/badges.component';
 import { ButtonsComponent } from './ang-material/buttons/buttons.component';
 import { ToggleButtonComponent } from './ang-material/toggle-button/toggle-button.component';
 import { CardsComponent } from './ang-material/cards/cards.component';
+import { CheckBoxComponent } from './ang-material/check-box/check-box.component';
+import { RadioButtonComponent } from './ang-material/radio-button/radio-button.component';
+import { PaginatorComponent } from './ang-material/paginator/paginator.component';
+import { MenuComponent } from './ang-material/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -187,7 +191,11 @@ import { CardsComponent } from './ang-material/cards/cards.component';
     BadgesComponent,
     ButtonsComponent,
     ToggleButtonComponent,
-    CardsComponent
+    CardsComponent,
+    CheckBoxComponent,
+    RadioButtonComponent,
+    PaginatorComponent,
+    MenuComponent,
   ],
   imports: [
     CommonModule,
