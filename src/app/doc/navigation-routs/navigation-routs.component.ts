@@ -7,7 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavigationRoutsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) { 
+    console.log(this.route)
+  }
   ngOnInit(): void {
   }
   navigationOne() {

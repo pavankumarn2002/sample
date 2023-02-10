@@ -1,7 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Contact } from 'src/app/contact';
- 
+
 @Component({
   selector: 'app-template-driven',
   templateUrl: './template-driven.component.html',
@@ -11,7 +11,7 @@ export class TemplateDrivenComponent implements OnInit {
   model = {
     text: null,
     number: null,
-    select:null,
+    select: null,
     checks: [
       {
         id: 'check-one',
@@ -45,16 +45,30 @@ export class TemplateDrivenComponent implements OnInit {
       label: 'Option Three',
     },
   ];
+  countryList = [
+    {
+      id: 1,
+      name: 'India',
+    },
+    {
+      id: 2,
+      name: 'Us',
+    },
+    {
+      id: 3,
+      name: 'Uk',
+    },
+  ]
   constructor() { }
 
   ngOnInit() {
   }
 
   onFormSubmit() {
-    console.log("Full Address", this.model);  
+    console.log("Full Address", this.model);
   }
-  onSubmit(contactForm:any){
+  onSubmit(contactForm: any) {
     console.log(contactForm)
   }
 }
- 
+

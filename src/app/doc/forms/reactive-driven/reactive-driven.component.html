@@ -13,7 +13,6 @@
             </div>
         </div>
         <div class="col">
-
             <p>
                 <label for="lastname">Last Name </label>
                 <input type="text" id="lastname" name="lastname" formControlName="lastname">
@@ -57,10 +56,32 @@
                     <option value="4">Singapore</option>
                 </select>
             </p>
+            <div *ngIf="f['country'].touched && f['country'].invalid" class="alert alert-danger">country Is Required.
+                <div *ngIf="f['country'].errors && f['country'].errors['country']">country Is Required.
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col" formArrayName="users">
+            <label for="lastname">Users</label>
+            <p *ngFor="let controls of  getControls(); let i = index">
+                <input type="text"  [formControlName]="i">
+            </p>
+        </div> -->
+        <div class="col-12" formArrayName="users">
+            <label >Users</label>
+            <p *ngFor="let controls of  getControls(); let i = index" [formGroupName]="i">
+                <input type="text"  formControlName="name">
+                <input type="text"  formControlName="age" (blur)="assignPrise(i)">
+                <input type="text"  formControlName="dept">
+                <button class="btn" (click)="removeUser(i)">Remove</button>
+            </p>
         </div>
         <div class="col">
             <p>
-                <button type="submit">Submit</button>
+                <button class="btn" (click)="addNew()">Add New</button>
+            </p>
+            <p>
+                <button type="submit" [disabled]="!contactForm.valid">Submit</button>
             </p>
         </div>
     </div>

@@ -60,6 +60,19 @@ import { CheckBoxComponent } from './ang-material/check-box/check-box.component'
 import { RadioButtonComponent } from './ang-material/radio-button/radio-button.component';
 import { PaginatorComponent } from './ang-material/paginator/paginator.component';
 import { MenuComponent } from './ang-material/menu/menu.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { ChainingPipesComponent } from './pipes/chaining-pipes/chaining-pipes.component';
+import { BuiltinPipesComponent } from './pipes/builtin-pipes/builtin-pipes.component';
+import { CustomPipesComponent } from './pipes/custom-pipes/custom-pipes.component';
+import { AsyncPipesComponent } from './pipes/async-pipes/async-pipes.component';
+import { RxjsMethodsComponent } from './rxjs-methods/rxjs-methods.component';
+import { PipeMethodComponent } from './rxjs-methods/pipe-method/pipe-method.component';
+import { FormArrayComponent } from './forms/form-array/form-array.component';
+import { DialogComponent } from './ang-material/dialog/dialog.component';
+import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
+import { ShowImageComponent } from './image-uploader/show-image/show-image.component';
+import { ShowProgressbarComponent } from './image-uploader/show-progressbar/show-progressbar.component';
+import { ComplexFormComponent } from './forms/complex-form/complex-form.component';
 const routes: Routes = [{
   path: '', component: DocComponent,
   children: [
@@ -157,6 +170,12 @@ const routes: Routes = [{
         },
         {
           path: 'reactive-driven', component: ReactiveDrivenComponent
+        },
+        {
+          path: 'form-array', component: FormArrayComponent
+        },
+        {
+          path: 'complex-form', component: ComplexFormComponent
         }
       ]
     },
@@ -208,6 +227,42 @@ const routes: Routes = [{
         },
         {
           path: 'menu', component:MenuComponent
+        },
+        {
+          path: 'dialog', component:DialogComponent
+        }
+      ]
+    },
+    {
+      path: 'pipes', component:PipesComponent, children: [
+        {
+          path: 'chaining-pipes', component:ChainingPipesComponent
+        },
+        {
+          path: 'builtin-pipes', component:BuiltinPipesComponent
+        },
+        {
+          path: 'custom-pipes', component:CustomPipesComponent
+        },
+        {
+          path: 'async-pipes', component:AsyncPipesComponent
+        }
+      ]
+    },
+    {
+      path: 'rxjs-methods', component:RxjsMethodsComponent, children: [
+        {
+          path: 'pipe-method', component:PipeMethodComponent
+        }
+      ]
+    },
+    {
+      path: 'image-uploader', component:ImageUploaderComponent, children: [
+        {
+          path: 'show-image', component:ShowImageComponent
+        },
+        {
+          path: 'show-progressbar', component:ShowProgressbarComponent
         }
       ]
     }

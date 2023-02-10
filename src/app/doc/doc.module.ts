@@ -112,6 +112,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+
+
 import { FilterCompleateComponent } from './ang-material/filter-compleate/filter-compleate.component';
 import { BadgesComponent } from './ang-material/badges/badges.component';
 import { ButtonsComponent } from './ang-material/buttons/buttons.component';
@@ -121,6 +123,21 @@ import { CheckBoxComponent } from './ang-material/check-box/check-box.component'
 import { RadioButtonComponent } from './ang-material/radio-button/radio-button.component';
 import { PaginatorComponent } from './ang-material/paginator/paginator.component';
 import { MenuComponent } from './ang-material/menu/menu.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { ChainingPipesComponent } from './pipes/chaining-pipes/chaining-pipes.component';
+import { BuiltinPipesComponent } from './pipes/builtin-pipes/builtin-pipes.component';
+import { CustomPipesComponent } from './pipes/custom-pipes/custom-pipes.component';
+import { TempConverterPipe } from './pipes/temp-converter.pipe';
+import { AsyncPipesComponent } from './pipes/async-pipes/async-pipes.component';
+import { RxjsMethodsComponent } from './rxjs-methods/rxjs-methods.component';
+import { PipeMethodComponent } from './rxjs-methods/pipe-method/pipe-method.component';
+import { FormArrayComponent } from './forms/form-array/form-array.component';
+import { DialogComponent } from './ang-material/dialog/dialog.component';
+import { DialogExampleComponent } from './ang-material/dialog-example/dialog-example.component';
+import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
+import { ShowImageComponent } from './image-uploader/show-image/show-image.component';
+import { ShowProgressbarComponent } from './image-uploader/show-progressbar/show-progressbar.component';
+import { ComplexFormComponent } from './forms/complex-form/complex-form.component';
 
 @NgModule({
   declarations: [
@@ -196,7 +213,23 @@ import { MenuComponent } from './ang-material/menu/menu.component';
     RadioButtonComponent,
     PaginatorComponent,
     MenuComponent,
+    PipesComponent,
+    ChainingPipesComponent,
+    BuiltinPipesComponent,
+    CustomPipesComponent,
+    TempConverterPipe,
+    AsyncPipesComponent,
+    RxjsMethodsComponent,
+    PipeMethodComponent,
+    FormArrayComponent,
+    DialogComponent,
+    DialogExampleComponent,
+    ImageUploaderComponent,
+    ShowImageComponent,
+    ShowProgressbarComponent,
+    ComplexFormComponent
   ],
+  entryComponents:[DialogExampleComponent],
   imports: [
     CommonModule,
     DocRoutingModule,FormsModule,ReactiveFormsModule,

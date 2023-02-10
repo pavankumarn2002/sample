@@ -5,12 +5,15 @@ import { interval } from 'rxjs';
 import { Router } from '@angular/router';
 import { SubjectService } from './subject.service';
 import { ExternalService } from './external.service';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = " ";
   /* Component2Data: any
    constructor(private dataShare: DataSharingService) {

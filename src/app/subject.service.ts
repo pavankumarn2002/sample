@@ -12,20 +12,18 @@ export class SubjectService {
     this.loginToken.next(tokenLog);
     console.log(tokenLog)
   }
-
   getLoginToken() {
     return this.loginToken;
   }
 
-
-
   setPost(post: any) {
     this.subjectVar.next(post);
   }
-
   getPosts() {
+    console.log( this.subjectVar)
     return this.subjectVar;
   }
+  
   subject$ = new Subject();
   ngOnInit() {
     this.subject$.subscribe(val => {

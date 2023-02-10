@@ -1,10 +1,7 @@
 <div class="container create-container">
     <h1>Create New Post</h1>
-  
-    <a href="#" routerLink="/doc/crud-operation/get-data" class="mt-2 mb-2 btn btn-primary">Back</a>
-        
+    <a href="#" routerLink="/doc/crud-operation/get-data" class="mt-2 mb-2 btn btn-primary">Back</a> 
     <form [formGroup]="form" (ngSubmit)="submit()">
-  
         <div class="form-group">
             <label for="title">Title:</label>
             <input 
@@ -16,7 +13,6 @@
                 <div *ngIf="f['title'].errors && f['title'].errors['required']">Title is required.</div>
             </div>
         </div>
-  
         <div class="form-group">
             <label for="body">Body</label>
             <textarea 
@@ -29,7 +25,6 @@
                 <div *ngIf="f['body'].errors && f['body'].errors['required']">Body is required.</div>
             </div>
         </div>
-  
         <button class="btn btn-primary" type="submit" >Submit</button>
     </form>
 </div>

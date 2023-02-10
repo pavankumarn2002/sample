@@ -1,0 +1,11 @@
+<div class="">
+    <div *ngIf="(obsValue | async); else elseBlock">
+        <h5>{{ obsValue | async}}</h5>
+    </div>
+    <ng-template #elseBlock>
+        <h5>Observable is loading. Please wait</h5>
+    </ng-template>
+    <div *ngIf="(obsValue | async);">
+        <h5> observable has recevied data</h5>
+    </div>
+</div>

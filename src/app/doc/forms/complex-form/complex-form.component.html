@@ -1,0 +1,80 @@
+<div class="">
+    <mat-toolbar color="primary">
+        <span class="fill-remaining-space">Company Information</span>
+    </mat-toolbar>
+</div>
+
+<form [formGroup]="companyForm" (ngSubmit)="onSubmit(companyForm.value, companyForm.valid)" class="form" novalidate>
+
+    <mat-form-field class="form-element">
+        <input matInput placeholder="Company Name" formControlName="companyName">
+
+    </mat-form-field>
+
+    <!-- nested form group -->
+    <table class="full-width" cellspacing="0" formGroupName="address">
+        <span class="fill-remaining-space">Address</span>
+        <tr>
+            <td>
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Unit" formControlName="unit">
+
+
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Street" formControlName="street">
+
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+
+    <!-- nested form array -->
+    <div formArrayName="emails">
+        <div class="">
+            <span class="fill-remaining-space">Emails</span>
+        </div>
+        <mat-form-field class="form-element" *ngFor="let email of emails.controls; let i = index">
+            <input matInput placeholder="Email {{i + 1}}" [formControlName]="i">
+
+        </mat-form-field>
+    </div>
+
+    <!-- nested form array with form group -->
+    <div formArrayName="contacts">
+        <span class="fill-remaining-space">Contacts</span>
+        <button mat-stroked-button color="primary" type="button" (click)="addContactField()">
+            Add Contact
+        </button>
+        <button mat-stroked-button color="warn" type="button" (click)="removeContactField()">
+            Remove Last Contact
+        </button>
+        <table class="full-width" cellspacing="0">
+            <tr *ngFor="let contact of contacts.controls; let i = index" [formGroupName]="i">
+                <td>
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Name" formControlName="name">
+
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Phone" formControlName="phone">
+
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <re-captcha formControlName="recaptchaReactive" siteKey="6LffkWYkAAAAAE8jd4fNIQ8J-2ykrpFZE79F1vKP">
+        </re-captcha>
+
+    </div>
+
+    <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button">
+            Submit
+        </button>
+    </div>
+</form>

@@ -7,7 +7,11 @@ import { SubjectService } from 'src/app/subject.service';
 })
 export class BehaviourTwoComponent implements OnInit {
   subjectReceive: any;
+  dynamicSubject:any;
   constructor(private subjectService: SubjectService) {
+    this.subjectService.getPosts().subscribe((res: any) => {
+      this.dynamicSubject=res;
+    });
   }
   ngOnInit(): void {
   }

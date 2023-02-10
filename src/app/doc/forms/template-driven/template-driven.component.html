@@ -32,12 +32,10 @@
                 <input type="radio" id="radio-1" name="formRadioGroup" [value]="1" [(ngModel)]="model.radio" />
                 <label for="radio-1">Radio One</label>
             </div>
-
             <div>
                 <input type="radio" id="radio-2" name="formRadioGroup" [value]="2" [(ngModel)]="model.radio" />
                 <label for="radio-2">Radio Two</label>
             </div>
-
             <div>
                 <input type="radio" id="radio-3" name="formRadioGroup" [value]="3" [(ngModel)]="model.radio" />
                 <label for="radio-3">Radio Three</label>
@@ -71,6 +69,14 @@
         <label for="isMarried">Married</label>
         <input type="checkbox" name="isMarried" ngModel>
     </p>
+    <div class="col">
+    <label for="isMarried">Country</label>
+    <select name="country" ngModel>
+        <option [ngValue]="c.name" *ngFor="let c of countryList">
+          {{c.name}}
+        </option>
+      </select>
+    </div>
     <p>
         <button type="submit">Submit</button>
     </p>

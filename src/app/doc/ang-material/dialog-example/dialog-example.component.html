@@ -1,0 +1,6 @@
+<p>dialog-example works!</p>
+
+<button (click)="closeDialog()">Cancel</button>
+<button (click)="closeDialog()" cdkFocusInitial>close</button>
+<input type="radio" value="true" name="action" (click)="closeRadio($event)"> Accept
+<input type="radio" value="false" name="action" (click)="closeRadio($event)"> Reject
